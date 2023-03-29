@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvCantidadDinero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cantidad de dinero"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ivtencents"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivfivecents"
+        android:layout_width="119dp"
+        android:layout_height="139dp"
+        android:src="@drawable/five_cents"
+        app:layout_constraintBottom_toTopOf="@+id/ivquarter"
+        app:layout_constraintEnd_toStartOf="@+id/ivtencents"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCantidadDinero"
+        app:srcCompat="@drawable/five_cents" />
+
+    <ImageView
+        android:id="@+id/ivtencents"
+        android:layout_width="119dp"
+        android:layout_height="139dp"
+        android:src="@drawable/ten_cents"
+        app:layout_constraintBottom_toTopOf="@+id/ivonedolar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ivfivecents"
+        app:layout_constraintTop_toBottomOf="@+id/tvCantidadDinero"
+        app:srcCompat="@drawable/ten_cents" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50121653" />
+
+    <TextView
+        android:id="@+id/tvFiveCents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0.05"
+        app:layout_constraintEnd_toEndOf="@+id/ivfivecents"
+        app:layout_constraintHorizontal_bias="0.524"
+        app:layout_constraintStart_toStartOf="@+id/ivfivecents"
+        tools:layout_editor_absoluteY="405dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/ivquarter"
+        android:layout_width="@dimen/quarterDImension"
+        android:layout_height="139dp"
+        android:src="@drawable/quarter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivonedolar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivfivecents"
+        app:srcCompat="@drawable/quarter" />
+
+    <TextView
+        android:id="@+id/tvcantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cantidad"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ivfivecents"
+        app:layout_constraintTop_toBottomOf="@+id/tvCantidadDinero"
+        app:layout_constraintVertical_bias="0.424"
+        tools:layout_editor_absoluteX="201dp" />
+
+    <ImageView
+        android:id="@+id/ivonedolar"
+        android:layout_width="119dp"
+        android:layout_height="@dimen/ivOneDolar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ivquarter"
+        app:layout_constraintTop_toBottomOf="@+id/ivtencents"
+        app:srcCompat="@drawable/one_dollar" />
+
+    <TextView
+        android:id="@+id/tvTenCents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvTenCents"
+        app:layout_constraintEnd_toEndOf="@+id/ivtencents"
+        app:layout_constraintStart_toStartOf="@+id/ivtencents"
+        tools:layout_editor_absoluteY="408dp" />
+
+    <TextView
+        android:id="@+id/tvQuarer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/quarer"
+        app:layout_constraintEnd_toEndOf="@+id/ivquarter"
+        app:layout_constraintStart_toStartOf="@+id/ivquarter"
+        tools:layout_editor_absoluteY="643dp" />
+
+    <TextView
+        android:id="@+id/tvONeDolar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/oneDolar"
+        app:layout_constraintEnd_toEndOf="@+id/ivonedolar"
+        app:layout_constraintStart_toStartOf="@+id/ivonedolar"
+        tools:layout_editor_absoluteY="644dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
